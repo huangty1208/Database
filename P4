@@ -1,0 +1,335 @@
+mtcar
+mtcars
+mtcars$1
+mtcars$mpg
+mtcars[1,2]
+mtcars[1,3]
+q()
+c1=(1,1,1,0,0,0,0,0,0,0,0)
+c1=c(1,1,1,0,0,0,0,0,0,0,0)
+c1
+hw = matrix(c1,nrow=11, ncol=1) 
+hw
+c2=c(0,1,1,1,1,0,0,0,0,0,0)
+cbind(hw,c2)
+hw = cbind(hw,c2)
+hw
+c3=c(0,0,1,0,0,1,1,0,0,0,0)
+hw = cbind(hw,c3)
+hw
+c4=c(1,0,0,1,2,0,0,0,0,0,0)
+hw = cbind(hw,c4)
+hw
+c5=c(1,0,0,0,1,1,0,0,0,0,0)
+hw = cbind(hw,c5)
+hw
+m6=c(0,0,0,0,0,0,0,1,1,0,0)
+hw = cbind(hw,m6)
+hw
+m7=c(0,0,0,0,0,0,0,0,1,1,0)
+hw = cbind(hw,m7)
+hw
+m8=c(0,0,0,0,0,0,0,0,1,1,1)
+hw = cbind(hw,m8)
+hw
+m9=c(0,0,0,0,0,0,0,0,1,0,1)
+hw = cbind(hw,m9)
+hw
+m10=c(0,0,0,0,0,0,1,0,0,0,1)
+hw = cbind(hw,m10)
+hw
+hw[1,2]
+l=c("released","software","computer","operating","system","virus","business","recovery","economy","recession","growth")
+l
+dimnames(hw)=list(l)
+hw
+l2=("c1","c2","c3","c4","c5","m6","m7","m8","m9","m10")
+l2=c("c1","c2","c3","c4","c5","m6","m7","m8","m9","m10")
+l2
+dimnames(hw)=list(l,l2)
+hw
+c1
+norm(c1,2)
+sum(c4)
+sum(c4^2)
+sum(c4^2)^1/2
+sqrt(sum(c4^2))
+sqrt(sum(c1^2))
+sqrt(sum(c2^2))
+sqrt(sum(c3^2))
+sqrt(sum(c4^2))
+sqrt(sum(c5^2))
+sqrt(sum(m6^2))
+sqrt(sum(m7^2))
+sqrt(sum(m8^2))
+sqrt(sum(m9^2))
+sqrt(sum(m10^2))
+l4=c(1.732,2,1.732,2.449,1.732,1.414,1.414,1.732,1.414,1.414)
+l4
+h2=matrix(l4,nrow=1,ncol=10)
+h2
+dimnames(h2)=list(l,c("l2-norm"))
+l
+dimnames(h2)=list(l2,c("l2-norm"))
+l1
+l2
+dimnames(h2)=list(l2,"l2-norm")
+dimnames(h2)=list(l2)
+h2
+dimnames(h2)=list(,l2)
+dimnames(h2)=list(c("l2 norm"),l2)
+h2
+h2
+h3=c("c1"  "c2"  "c3"  "c4"  "c5"  "m6"  "m7"  "m8"  "m9"  "m10")
+h3=c(c1,c2,c3,c4,c5,m6,m7,m8,m9,m10)
+h3
+for( i in h3){print i }
+for(i in h3){i}
+h3
+for(i in h3){print(i)}
+c1
+h3=list(c1,c2,c3,c4,c5,m6,m7,m8,m9,m10)
+h3
+for(i in h3){print(i)}
+for(i in h3){for(j in h3){print(i*j)}}
+for(i in h3){for(j in h3){a1=a1+i*j}a2=a2+a1}
+a1
+a1=0
+a2
+a2=0
+for(i in h3){for(j in h3){a1=a1+i*j}a2=a2+a1}
+a1=list()
+a1
+a1=c()
+a1
+for(i in h3){for(j in h3){a1=c(a1,sum(i*j))}print(a1)}
+for(i in h3){for(j in h3){a1=c(a1,sum(i*j))}}
+a1
+a2
+a2=list()
+for(i in h3){for(j in h3){a1=c(a1,sum(i*j))} a2=list(a2,a1)}
+for(i in h3){for(j in h3){a1=c(a1,sum(i*j))} a2=list(a2,a1)}
+for(i in h3){for(j in h3){a1=c(a1,sum(i*j))},a2=list(a2,a1)}
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))} 
+  a2=list(a2,a1)
+done
+q
+}
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  a2=list(a2,a1)
+  }
+a2
+a1
+a1=c()
+a2=list()
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  a2=list(a2,a1)
+  }
+a2
+a1=c()
+a2=c()
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  a2=list(a2,a1)
+  }
+a1
+aa2
+a2
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  a2=list(a2,a1)
+  a1=c()
+  }
+a1
+a2
+a2=c()
+a1
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  a2=c(a2,a1)
+  a1=c()
+  }
+a1
+a2
+a1
+a2=list()
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  a2=append(a2,a1)
+  a1=c()
+  }
+a1
+a2
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  print(a1)
+  a1=c()
+  }
+c1
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j)/(sqrt(sum(i^2)*sqrt(sum(j^2)))))
+    } 
+  print(a1)
+  a1=c()
+  }
+c1
+c2
+c1
+sum(c1*c1)
+sqrt(sum(c1^2))
+sqrt(sum(c1^2))*sqrt(sum(c1^2))
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j)/(sqrt(sum(i^2)*sqrt(sum(j^2))))
+    } 
+  print(a1)
+  a1=c()
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j)/(sqrt(sum(i^2)*sqrt(sum(j^2)))
+    } 
+  print(a1)
+  a1=c()
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j)/(sqrt(sum(i^2)*sqrt(sum(j^2)))))
+    } 
+  print(a1)
+  a1=c()
+  }
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j))
+    } 
+  print(a1)
+  a1=c()
+  }
+hw
+for(i in h3){
+  for(j in h3){
+    a1=c(a1,sum(i*j)/(sqrt(sum(i^2))*sqrt(sum(j^2))))
+    } 
+  print(a1)
+  a1=c()
+  }
+h2
+h2
+svd(h2)
+h3
+h4
+h4=svd(h2)
+h4
+h4$u
+dim(h4$u)
+h4$d
+dim(h4$v)
+c1
+hw
+h2
+z1=c1/1.732
+sqrt(3)
+z1
+z2=c2/2
+z3=c3/sqrt(3)
+z1=c1/sqrt(3)
+z4=c4/sqrt(4)
+z5=c5/sqrt(3)
+z6=m6/sqrt(2)
+z7=m7/sqrt(2)
+z8=m8/sqrt(3)
+z9=m9/sqrt(2)
+z10=m10/sqrt(2)
+he3
+hw3
+hw3=matrix(nrox=11,ncol=10)
+hw3=matrix(nrow=11,ncol=10)
+hw3
+rbind(hw3,z1)
+cbind(hw3,z1)
+hw3=matrix()
+cbind(hw3,z1)
+hw3
+hw3=matrix(11,0)
+hw3=matrix(11,)
+hw3
+hw3=matrix(nrow=11)
+hw3
+cbind(hw3,z1)
+hw3=matrix(z1)
+hw3
+cbind(hw3,z2)
+cbind(hw3,z3)
+hw3
+hw3=cbind(hw3,z2)
+hw3
+hw3=cbind(hw3,z3)
+hw3=cbind(hw3,z4)
+hw3=cbind(hw3,z5)
+hw3=cbind(hw3,z6)
+hw3=cbind(hw3,z7)
+hw3=cbind(hw3,z8)
+hw3=cbind(hw3,z9)
+hw3=cbind(hw3,z10)
+hw3
+dimnames(hw3)=list(l,l2)
+hw3
+z4=c4/sqrt(6)
+z4
+hw3
+hw3=matrix(z1)
+hw3
+hw3=cbind(hw3,z2)
+hw3
+hw3=cbind(hw3,z3)
+hw3=cbind(hw3,z4)
+hw3=cbind(hw3,z5)
+hw3=cbind(hw3,z6)
+hw3=cbind(hw3,z7)
+hw3=cbind(hw3,z8)
+hw3=cbind(hw3,z9)
+hw3=cbind(hw3,z10)
+hw3
+dimnames(hw3)=list(l,l2)
+hw3
+svd(hw3)
+svd(hw3)
+hh=svd(hw3)
+hh$u
+hh$u[1]
+hh$u[1,]
+hh$u[,1]
+plot(hh$u[,1])
+plot(hh$u[,2])
+line(hh$u[,2])
+line(hh$u[,2],type=o)
+line(hh$u[,2],type="o")
+line(hh$u[,2],type="0")
+plot(hh$u[,2],type="o")
+plot(hh$u[,1],type="o")
+lines(hh$u[,2],type="o")
+lines(hh$u[,2],type="o",pch=22)
+lines(hh$u[,2],type="o",pch=22,lty=2)
+plot(hh$u[,1],type="o")
+lines(hh$u[,2],type="o",pch=22,lty=2)
+plot(hh$u[,1],type="o")
+plot(hh$u[,2],type="o")
+lines(hh$u[,1],type="o",pch=22,lty=2)

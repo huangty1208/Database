@@ -1,0 +1,226 @@
+gunzip 1_ATCACG_L001_R2_001.fastq.gz   
+gunzip 2_CGATGT_L001_R1_001.fastq.gz   
+gunzip 2_CGATGT_L001_R2_001.fastq.gz   
+gunzip 3_TGACCA_L001_R1_001.fastq.gz  
+gunzip 3_TGACCA_L001_R2_001.fastq.gz   
+gunzip 4_ACAGTG_L001_R1_001.fastq.gz   
+gunzip 4_ACAGTG_L001_R2_001.fastq.gz   
+gunzip 5_GCCAAT_L001_R1_001.fastq.gz   
+gunzip 5_GCCAAT_L001_R2_001.fastq.gz   
+gunzip 6_CAGATC_L001_R1_001.fastq.gz   
+gunzip 6_CAGATC_L001_R2_001.fastq.gz   
+gunzip 7_ACTTGA_L001_R1_001.fastq.gz   
+gunzip 7_ACTTGA_L001_R2_001.fastq.gz   
+gunzip 8_CTTGTA_L001_R1_001.fastq.gz   
+gunzip 8_CTTGTA_L001_R2_001.fastq.gz 
+gunzip 10_CGATGT_L002_R1_001.fastq.gz  
+gunzip 9_ATCACG_L002_R1_001.fastq.gz
+gunzip 9_ATCACG_L002_R2_001.fastq.gz
+gunzip 10_CGATGT_L002_R2_001.fastq.gz
+
+bwa aln TAIR10_allchr.fasta 1_ATCACG_L001_R1_001.fastq > ZT0InA1R2_1.bai
+bwa aln TAIR10_allchr.fasta 1_ATCACG_L001_R2_001.fastq > ZT0InA1R2_2.bai
+bwa aln TAIR10_allchr.fasta 2_CGATGT_L001_R1_001.fastq > ZT0CA2R2_1.bai
+bwa aln TAIR10_allchr.fasta 2_CGATGT_L001_R2_001.fastq > ZT0CA2R2_2.bai
+bwa aln TAIR10_allchr.fasta 3_TGACCA_L001_R1_001.fastq > ZT0K4A4R2_1.bai
+bwa aln TAIR10_allchr.fasta 3_TGACCA_L001_R2_001.fastq > ZT0K4A4R2_2.bai
+bwa aln TAIR10_allchr.fasta 4_ACAGTG_L001_R1_001.fastq > ZT0K9cA5R2_1.bai
+bwa aln TAIR10_allchr.fasta 4_ACAGTG_L001_R2_001.fastq > ZT0K9cA5R2_2.bai
+bwa aln TAIR10_allchr.fasta 5_GCCAAT_L001_R1_001.fastq > ZT9InA6R2_1.bai
+bwa aln TAIR10_allchr.fasta 5_GCCAAT_L001_R2_001.fastq > ZT9InA6R2_2.bai
+bwa aln TAIR10_allchr.fasta 6_CAGATC_L001_R1_001.fastq > ZT9CA7R2_1.bai
+bwa aln TAIR10_allchr.fasta 6_CAGATC_L001_R2_001.fastq > ZT9CA7R2_2.bai
+bwa aln TAIR10_allchr.fasta 7_ACTTGA_L001_R1_001.fastq > ZT9K4A8R2_1.bai
+bwa aln TAIR10_allchr.fasta 7_ACTTGA_L001_R2_001.fastq > ZT9K4A8R2_2.bai
+bwa aln TAIR10_allchr.fasta 8_CTTGTA_L001_R1_001.fastq > ZT9KcA12R2_1.bai
+bwa aln TAIR10_allchr.fasta 8_CTTGTA_L001_R2_001.fastq > ZT9KcA12R2_2.bai
+bwa aln TAIR10_allchr.fasta 9_ATCACG_L002_R1_001.fastq > ZT3InA1R2_1.bai
+bwa aln TAIR10_allchr.fasta 9_ATCACG_L002_R2_001.fastq > ZT3InA1R2_2.bai
+bwa aln TAIR10_allchr.fasta 10_CGATGT_L002_R1_001.fastq > ZT3CA2R2_1.bai
+bwa aln TAIR10_allchr.fasta 10_CGATGT_L002_R2_001.fastq > ZT3CA2R2_2.bai
+
+bwa sampe TAIR10_allchr.fasta ZT0InA1R2_1.bai ZT0InA1R2_2.bai 1_ATCACG_L001_R1_001.fastq 1_ATCACG_L001_R2_001.fastq | samtools view -bSh - > ZT0InA1R2.bam
+bwa sampe TAIR10_allchr.fasta ZT0CA2R2_1.bai ZT0CA2R2_2.bai 2_CGATGT_L001_R1_001.fastq 2_CGATGT_L001_R2_001.fastq | samtools view -bSh - > ZT0CA2R2.bam
+bwa sampe TAIR10_allchr.fasta ZT0K4A4R2_1.bai ZT0K4A4R2_2.bai 3_TGACCA_L001_R1_001.fastq 3_TGACCA_L001_R2_001.fastq | samtools view -bSh - > ZT0K4A4R2.bam
+bwa sampe TAIR10_allchr.fasta ZT0K9cA5R2_1.bai ZT0K9cA5R2_2.bai 4_ACAGTG_L001_R1_001.fastq 4_ACAGTG_L001_R2_001.fastq | samtools view -bSh - > ZT0K9cA5R2.bam
+bwa sampe TAIR10_allchr.fasta ZT9InA6R2_1.bai ZT9InA6R2_2.bai 5_GCCAAT_L001_R1_001.fastq 5_GCCAAT_L001_R2_001.fastq | samtools view -bSh - > ZT9InA6R2.bam
+bwa sampe TAIR10_allchr.fasta ZT9CA7R2_1.bai ZT9CA7R2_2.bai 6_CAGATC_L001_R1_001.fastq 6_CAGATC_L001_R2_001.fastq | samtools view -bSh - > ZT9CA7R2.bam
+bwa sampe TAIR10_allchr.fasta ZT9K4A8R2_1.bai ZT9K4A8R2_2.bai 7_ACTTGA_L001_R1_001.fastq 7_ACTTGA_L001_R2_001.fastq | samtools view -bSh - > ZT9K4A8R2.bam
+bwa sampe TAIR10_allchr.fasta ZT9KcA12R2_1.bai ZT9KcA12R2_2.bai 8_CTTGTA_L001_R1_001.fastq 8_CTTGTA_L001_R2_001.fastq | samtools view -bSh - > ZT9KcA12R2.bam
+bwa sampe TAIR10_allchr.fasta ZT3InA1R2_1.bai ZT3InA1R2_2.bai 9_ATCACG_L002_R1_001.fastq 9_ATCACG_L002_R2_001.fastq | samtools view -bSh - > ZT3InA1R2.bam
+bwa sampe TAIR10_allchr.fasta ZT3CA2R2_1.bai ZT3CA2R2_2.bai 10_CGATGT_L002_R1_001.fastq 10_CGATGT_L002_R2_001.fastq | samtools view -bSh - > ZT3CA2R2.bam
+
+
+samtools view -bq1 -F 0X04 ZT0InA1R2.bam > ZT0InA1R2_uF.bam
+samtools view -bq1 -F 0X04 ZT0CA2R2.bam > ZT0CA2R2_uF.bam
+samtools view -bq1 -F 0X04 ZT0K4A4R2.bam > ZT0K4A4R2_uF.bam
+samtools view -bq1 -F 0X04 ZT0K9cA5R2.bam > ZT0K9cA5R2_uF.bam
+samtools view -bq1 -F 0X04 ZT9InA6R2.bam > ZT9InA6R2_uF.bam
+samtools view -bq1 -F 0X04 ZT9CA7R2.bam > ZT9CA7R2_uF.bam
+samtools view -bq1 -F 0X04 ZT9K4A8R2.bam > ZT9K4A8R2_uF.bam
+samtools view -bq1 -F 0X04 ZT9KcA12R2.bam > ZT9KcA12R2_uF.bam
+samtools view -bq1 -F 0X04 ZT3InA1R2.bam > ZT3InA1R2_uF.bam
+samtools view -bq1 -F 0X04 ZT3CA2R2.bam > ZT3CA2R2_uF.bam
+
+samtools flagstat ZT0InA1R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT0CA2R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT0K4A4R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT0K9cA5R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT9InA6R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT9CA7R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT9K4A8R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT9KcA12R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT3InA1R2_uF.bam >> flagstatq.txt
+samtools flagstat ZT3CA2R2_uF.bam >> flagstatq.txt
+
+
+
+11_TGACCA_L002_R1_001.fastq
+11_TGACCA_L002_R2_001.fastq
+12_ACAGTG_L002_R1_001.fastq
+12_ACAGTG_L002_R2_001.fastq
+13_GCCAAT_L002_R1_001.fastq
+13_GCCAAT_L002_R2_001.fastq
+14_CAGATC_L002_R1_001.fastq
+14_CAGATC_L002_R2_001.fastq
+15_ACTTGA_L002_R1_001.fastq
+15_ACTTGA_L002_R2_001.fastq
+16_CTTGTA_L002_R1_001.fastq
+16_CTTGTA_L002_R2_001.fastq
+17_ATCACG_L003_R1_001.fastq
+17_ATCACG_L003_R2_001.fastq
+18_CGATGT_L003_R1_001.fastq
+18_CGATGT_L003_R2_001.fastq
+19_TGACCA_L003_R1_001.fastq
+19_TGACCA_L003_R2_001.fastq
+20_ACAGTG_L003_R1_001.fastq
+20_ACAGTG_L003_R2_001.fastq
+21_GCCAAT_L003_R1_001.fastq
+21_GCCAAT_L003_R2_001.fastq
+22_CAGATC_L003_R1_001.fastq
+22_CAGATC_L003_R2_001.fastq
+23_ACTTGA_L003_R1_001.fastq
+23_ACTTGA_L003_R2_001.fastq
+24_CTTGTA_L003_R1_001.fastq
+24_CTTGTA_L003_R2_001.fastq
+25_ATCACG_L004_R1_001.fastq
+25_ATCACG_L004_R2_001.fastq
+26_CGATGT_L004_R1_001.fastq
+26_CGATGT_L004_R2_001.fastq
+27_TGACCA_L004_R1_001.fastq
+27_TGACCA_L004_R2_001.fastq
+28_ACAGTG_L004_R1_001.fastq
+28_ACAGTG_L004_R2_001.fastq
+29_GCCAAT_L004_R1_001.fastq
+29_GCCAAT_L004_R2_001.fastq
+30_CAGATC_L004_R1_001.fastq
+30_CAGATC_L004_R2_001.fastq
+31_ACTTGA_L004_R1_001.fastq
+31_ACTTGA_L004_R2_001.fastq
+32_CTTGTA_L004_R1_001.fastq
+32_CTTGTA_L004_R2_001.fastq
+33_ATCACG_L005_R1_001.fastq
+33_ATCACG_L005_R2_001.fastq
+34_CGATGT_L005_R1_001.fastq
+34_CGATGT_L005_R2_001.fastq
+35_TGACCA_L005_R1_001.fastq
+35_TGACCA_L005_R2_001.fastq
+36_ACAGTG_L005_R1_001.fastq
+36_ACAGTG_L005_R2_001.fastq
+37_GCCAAT_L005_R1_001.fastq
+37_GCCAAT_L005_R2_001.fastq
+38_CAGATC_L005_R1_001.fastq
+38_CAGATC_L005_R2_001.fastq
+39_ACTTGA_L005_R1_001.fastq
+39_ACTTGA_L005_R2_001.fastq
+40_CTTGTA_L005_R1_001.fastq
+40_CTTGTA_L005_R2_001.fastq
+41_ATCACG_L006_R1_001.fastq
+41_ATCACG_L006_R2_001.fastq
+42_CGATGT_L006_R1_001.fastq
+42_CGATGT_L006_R2_001.fastq
+43_TGACCA_L006_R1_001.fastq
+43_TGACCA_L006_R2_001.fastq
+44_ACAGTG_L006_R1_001.fastq
+44_ACAGTG_L006_R2_001.fastq
+45_GCCAAT_L006_R1_001.fastq
+45_GCCAAT_L006_R2_001.fastq
+46_CAGATC_L006_R1_001.fastq
+46_CAGATC_L006_R2_001.fastq
+47_ACTTGA_L006_R1_001.fastq
+47_ACTTGA_L006_R2_001.fastq
+48_CTTGTA_L006_R1_001.fastq
+48_CTTGTA_L006_R2_001.fastq
+49_ATCACG_L007_R1_001.fastq
+49_ATCACG_L007_R2_001.fastq
+50_CGATGT_L007_R1_001.fastq
+50_CGATGT_L007_R2_001.fastq
+51_TGACCA_L007_R1_001.fastq
+51_TGACCA_L007_R2_001.fastq
+52_ACAGTG_L007_R1_001.fastq
+52_ACAGTG_L007_R2_001.fastq
+53_GCCAAT_L007_R1_001.fastq
+53_GCCAAT_L007_R2_001.fastq
+54_CAGATC_L007_R1_001.fastq
+54_CAGATC_L007_R2_001.fastq
+55_ACTTGA_L007_R1_001.fastq
+55_ACTTGA_L007_R2_001.fastq
+56_CTTGTA_L007_R1_001.fastq
+56_CTTGTA_L007_R2_001.fastq
+57_ATCACG_L008_R1_001.fastq
+57_ATCACG_L008_R2_001.fastq
+58_CGATGT_L008_R1_001.fastq
+58_CGATGT_L008_R2_001.fastq
+59_TGACCA_L008_R1_001.fastq
+59_TGACCA_L008_R2_001.fastq
+60_ACAGTG_L008_R1_001.fastq
+60_ACAGTG_L008_R2_001.fastq
+61_GCCAAT_L008_R1_001.fastq
+61_GCCAAT_L008_R2_001.fastq
+62_CAGATC_L008_R1_001.fastq
+62_CAGATC_L008_R2_001.fastq
+63_ACTTGA_L008_R1_001.fastq
+63_ACTTGA_L008_R2_001.fastq
+64_CTTGTA_L008_R1_001.fastq
+64_CTTGTA_L008_R2_001.fastq
+65_ATCACG_L007_R1_001.fastq
+65_ATCACG_L007_R2_001.fastq
+66_CGATGT_L007_R1_001.fastq
+66_CGATGT_L007_R2_001.fastq
+67_TGACCA_L007_R1_001.fastq
+67_TGACCA_L007_R2_001.fastq
+68_ACAGTG_L007_R1_001.fastq
+68_ACAGTG_L007_R2_001.fastq
+69_GCCAAT_L007_R1_001.fastq
+69_GCCAAT_L007_R2_001.fastq
+70_CAGATC_L007_R1_001.fastq
+70_CAGATC_L007_R2_001.fastq
+71_ACTTGA_L007_R1_001.fastq
+71_ACTTGA_L007_R2_001.fastq
+72_CTTGTA_L007_R1_001.fastq
+72_CTTGTA_L007_R2_001.fastq
+73_ATCACG_L005_R1_001.fastq
+73_ATCACG_L005_R2_001.fastq
+74_CGATGT_L005_R1_001.fastq
+74_CGATGT_L005_R2_001.fastq
+75_TGACCA_L008_R1_001.fastq
+75_TGACCA_L008_R2_001.fastq
+76_ACAGTG_L005_R1_001.fastq
+76_ACAGTG_L005_R2_001.fastq
+77_GCCAAT_L008_R1_001.fastq
+77_GCCAAT_L008_R2_001.fastq
+78_CAGATC_L008_R1_001.fastq
+78_CAGATC_L008_R2_001.fastq
+79_ACTTGA_L005_R1_001.fastq
+79_ACTTGA_L005_R2_001.fastq
+80_CTTGTA_L008_R1_001.fastq
+80_CTTGTA_L008_R2_001.fastq
+81_ATCACG_L008_R1_001.fastq
+81_ATCACG_L008_R2_001.fastq
+
+
+
+
+
+
+
